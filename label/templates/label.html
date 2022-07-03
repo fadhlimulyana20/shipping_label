@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .box{page-break-inside:avoid; page-break-after:auto; position:relative;
+            display:block;}
+    </style>
 </head>
 <body>
     <div class="container mx-auto py-5">
         {% for d, r in data.iterrows %}
-            <div class="p-3 border border-2 rounded mb-5 w-3/6 mx-auto">
+            <div class="p-3 border border-2 rounded mb-5 w-4/6 mx-auto box">
                 <div class="mb-4">
                     <img src="/static/logo.png" alt="logo" class="w-1/12 mx-auto">
                 </div>
                 <div class="mb-4">
                     <div class="border-b">
-                        <h5 class="text-sm">Penerima: </h5>
+                        <h5 class="text-sm">Pengirim: </h5>
                     </div>
                     <h5 class="text-lg font-bold">Sunatlem Center Indonesia</h5>
                     <h5>Klaten, Indonesia</h5>
