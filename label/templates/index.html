@@ -17,6 +17,23 @@
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="mb-4">
+                    <label for="">Pengirim</label>
+                    <input class="w-full border p-2" type="text" name="pengirim" id="pengirim">
+                </div>
+                <div class="mb-4">
+                    <label for="">Alamat Pengirim</label>
+                    <input class="w-full border p-2" type="text" name="alamat_pengirim" id="alamat_pengirim">
+                </div>
+                <div class="mb-4">
+                    <label for="">Telepon Pengirim</label>
+                    <input class="w-full border p-2" type="text" name="telepon_pengirim" id="telepon_pengirim">
+                </div>
+                <div class="mb-4">
+                    <label for="">File Logo</label>
+                    <input class="w-full border p-2" type="file" name="logo" id="logo">
+                </div>
+                <div class="mb-4">
+                    <label for="">File Template</label>
                     <input class="w-full border p-2" type="file" name="file" id="file">
                 </div>
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 rounded px-2 py-1 w-full text-white font-medium">Kirim</button>

@@ -14,19 +14,19 @@
 <body>
     <div class="container mx-auto py-5">
         {% for d, r in data.iterrows %}
-            <div class="p-3 border border-2 rounded mb-5 w-4/6 mx-auto box">
+            <div class="p-3 border border-2 border-gray-800 rounded mb-5 w-4/6 mx-auto box">
                 <div class="mb-4">
-                    <img src="/static/logo.png" alt="logo" class="w-1/12 mx-auto">
+                    <img src="data:image/png;base64,{{ logo }}" alt="logo" class="w-1/12 mx-auto">
                 </div>
                 <div class="mb-4">
-                    <div class="border-b">
+                    <div class="border-b border-gray-800">
                         <h5 class="text-sm">Pengirim: </h5>
                     </div>
-                    <h5 class="text-lg font-bold">Sunatlem Center Indonesia</h5>
-                    <h5>Klaten, Indonesia</h5>
-                    <h5>Telp. 082323304030</h5>
+                    <h5 class="text-lg font-bold">{{ pengirim }}</h5>
+                    <h5>{{ alamat_pengirim }}</h5>
+                    <h5>Telp. {{ telepon_pengirim }}</h5>
                 </div>
-                <div class="border-b">
+                <div class="border-b border-gray-800">
                     <h5 class="text-sm">Penerima: </h5>
                 </div>
                 <h5 class="text-lg font-bold">{{ r.NAMA }}</h5>
